@@ -41,4 +41,8 @@ Para ver o build: `npx serve out`.
 4. Depois do primeiro deploy, adicione o domínio em **Custom domains** e defina `NEXT_PUBLIC_SITE_URL`
    (isso ativa canonical, URLs absolutas no sitemap e nos dados estruturados). Faça um novo deploy após definir.
 
+Se o projeto foi criado como **Worker** (tela "Workers & Pages" nova), o deploy usa `npx wrangler deploy` e lê o
+`wrangler.jsonc` da raiz, que publica a pasta `out/` como arquivos estáticos. Nesse caso, deixe
+Build command `npm run build` e Deploy command `npx wrangler deploy`.
+
 Os cabeçalhos de cache e segurança estão em `public/_headers`.
